@@ -18,7 +18,7 @@ elif index == 1:
 
 box = Box()
 box.choose_box()
-index_box = int(input("Choose box type:\n")) -1
+index_box = int(input("Choose box type:\n")) - 1
 
 if index_box == 0:
     box.box_type_a()
@@ -33,10 +33,11 @@ def boxes_per_layer():
 
 
 print(40 * "-")
-print("Pallet type:", pallet.pallet_type)
-print("Pallet length", pallet.pallet_length, "cm")
-print("Pallet width:", pallet.pallet_width, "cm")
+print("Pallet type  :", pallet.pallet_type)
+print("Pallet length:", pallet.pallet_length, "cm")
+print("Pallet width :", pallet.pallet_width, "cm")
 print(40 * "-")
-print("Box dimensions (L x W x H):", box.box_length,"x", box.box_width, "x", box.box_height, "cm")
+print("Box dimensions (L x W x H):", box.box_length,"x", box.box_width, "x",
+      box.box_height, "cm")
 print(40 * "-")
 print("boxes per layer:", boxes_per_layer())
