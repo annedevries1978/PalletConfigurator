@@ -2,6 +2,7 @@
 """
 A simple pallet configurator to find the optimum numbers of boxes per layer
 Learn to work witch classes and maybe also so something with property
+TODO: implement optimum pallet layer config optimisation
 """
 from classes import Pallet, Box
 
@@ -24,6 +25,7 @@ if index_box == 0:
 
 
 def boxes_per_layer():
+    # only correct in case of euro pallet
     boxes_on_length = pallet.pallet_length/box.box_length
     boxes_on_width = pallet.pallet_width/box.box_width
     return boxes_on_length * boxes_on_width
