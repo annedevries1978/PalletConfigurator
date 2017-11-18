@@ -26,6 +26,7 @@ if index_box == 0:
 
 def boxes_per_layer():
     # only correct in case of euro pallet
+    # use modulo
     boxes_on_length = pallet.pallet_length/box.box_length
     boxes_on_width = pallet.pallet_width/box.box_width
     return boxes_on_length * boxes_on_width
