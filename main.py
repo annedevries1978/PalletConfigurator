@@ -8,25 +8,27 @@ from classes import Pallet, Box
 
 pallet = Pallet()
 pallet.choose_pallet_type()
-index = int(input("Choose pallet type:\n")) - 1
+index = int(input("Choose pallet type:\n")) - 1  # -1 to get correct list value
 pallet.set_pallet_type(index)
 
 if index == 0:
     pallet.euro_pallet()
 elif index == 1:
     pallet.blok_pallet()
+# TODO: more pallet types
 
 box = Box()
 box.choose_box()
-index_box = int(input("Choose box type:\n")) - 1
+index_box = int(input("Choose box type:\n")) - 1  # -1 to get correct list value
 
 if index_box == 0:
     box.box_type_a()
+# TODO: more box types
 
 
 def boxes_per_layer():
     # only correct in case of euro pallet
-    # use modulo
+    # TODO: use modulo
     boxes_on_length = pallet.pallet_length/box.box_length
     boxes_on_width = pallet.pallet_width/box.box_width
     return boxes_on_length * boxes_on_width
