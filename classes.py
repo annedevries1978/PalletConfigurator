@@ -27,6 +27,7 @@ class Pallet(object):
                self.pallet_width, \
                self.pallet_length
 
+
 class Box(object):
     def __init__(self):
         self.type_list = ['A', 'B', 'C']
@@ -37,4 +38,12 @@ class Box(object):
 
     def choose_box(self):
         choice = 0
-        for self.type in self.type_list
+        for self.type in self.type_list:
+            choice += 1
+            print(str(choice) + ":", self.type)
+
+    def box_type_a(self):
+        self.box_width = 40
+        self.box_length = 40
+        self.box_height = 40
+
